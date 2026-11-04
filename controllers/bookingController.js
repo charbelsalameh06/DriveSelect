@@ -10,7 +10,7 @@ async function createBooking(req, res) {
   if (!body) return res.status(400).json({ error: 'Invalid JSON body' });
 
   const { vehicle_id, start_date, end_date } = body;
-  const userId = req.user.userId; 
+  const userId = req.user.id; 
 
   const vehicles = await readJsonFile(VEHICLES_FILE);
   const vehicle = vehicles.find((v) => v.vehicle_id === Number(vehicle_id));
@@ -43,7 +43,7 @@ async function createBooking(req, res) {
 };
 
 async function getMyBookings(req, res) {
-  const userId = req.user.userId;
+  const userId = req.user.id;
   const bookings = await readJsonFile(BOOKINGS_FILE);
   const userBookings = bookings.filter((b) => b.user_id === userId);
   res.json(userBookings);
@@ -56,7 +56,7 @@ async function cancelBooking(req, res) {
   if (!booking) return res.status(404).json({ error: 'Booking not found' });
 
  
-  if (booking.user_id !== req.user.userId) {
+  if (booking.user_id !== req.user.id) {
     return res.status(403).json({ error: 'Unauthorized to cancel this booking' });
   }
 

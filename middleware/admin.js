@@ -1,4 +1,4 @@
-const AppError = require('../utils/helper3');
+const { AppError } = require('../utils/helper3');
 
 const isAdminAsync = async (req, res, next) => {
   if (!req.user || req.user.role !== 'admin') {

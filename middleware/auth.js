@@ -1,5 +1,5 @@
-const {AppError, asyncHandler} = require('../utils/helper3');
-const verifyToken = require('../utils/helper2');
+const { AppError } = require('../utils/helper3');
+const { verifyToken } = require('../utils/helper2');
 
 function authenticate(req, res, next) {
   const header = req.headers.authorization || '';

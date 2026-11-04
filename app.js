@@ -31,9 +31,4 @@ app.use('/', indexRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
-app.use((req, res) => {
-  res.status(404).json({ error: 'Not found' });
-});
- 
-
 module.exports = app;
