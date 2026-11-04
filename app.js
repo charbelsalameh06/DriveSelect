@@ -8,8 +8,6 @@ const authRoutes = require('./routes/authRoutes');
 
 const bookingRoutes = require('./routes/bookingRoutes');
 
-const indexRoutes = require('./routes/indexRoutes');
-
 const vehicleRoutes = require('./routes/vehicleRoutes');
 
 const errorHandler = require('./middleware/errorHandler');
@@ -26,7 +24,6 @@ app.use('/api/user', userRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/booking', bookingRoutes);
 app.use('/api/vehicle', vehicleRoutes);
-app.use('/', indexRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

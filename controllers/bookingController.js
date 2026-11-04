@@ -3,7 +3,6 @@ const { readJsonFile, writeJsonFile, readJsonBody } = require('../utils/helpers'
 
 const BOOKINGS_FILE = path.join(__dirname, '../data', 'bookings.json');
 const VEHICLES_FILE = path.join(__dirname, '../data', 'vehicles.json');
-const BOOKING_FIELDS = ['status']; 
 
 async function createBooking(req, res) {
   const body = await readJsonBody(req);
