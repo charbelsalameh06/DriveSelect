@@ -5,8 +5,8 @@ const userRoutes = require('./routes/userRoutes');
 const authRoutes = require('./routes/authRoutes');
 const bookingRoutes = require('./routes/bookingRoutes');
 const vehicleRoutes = require('./routes/vehicleRoutes');
-const paymentRoutes = require('./routes/paymentRoutes');
-const maintenanceRoutes = require('./routes/maintenanceRoutes');
+const paymentRoutes = require('./routes/paymentsRoutes');
+const maintenanceRoutes = require('./routes/MaintenanceRecordRoutes');
 const categoryRoutes = require('./routes/categoryRoutes');
 
 const errorHandler = require('./middleware/errorHandler');
